@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39A4FB06-FE60-43F4-B97D-39E349EA5009}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATS</RootNamespace>
+    <AssemblyName>ATS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NationalInstruments.VisaNS">
+      <HintPath>..\..\..\..\..\Desktop\肯微科技\dll\NationalInstruments.VisaNS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TIDP.SAA2">
+      <HintPath>..\..\..\..\..\Desktop\肯微科技\dll\TIDP.SAA2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogControl2.Designer.cs">
+      <DependentUpon>LogControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogControl3.Designer.cs">
+      <DependentUpon>LogControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogControl4.Designer.cs">
+      <DependentUpon>LogControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogControl5.Designer.cs">
+      <DependentUpon>LogControl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFiTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFiTHD.Designer.cs">
+      <DependentUpon>PFiTHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogControl2.resx">
+      <DependentUpon>LogControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogControl3.resx">
+      <DependentUpon>LogControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogControl4.resx">
+      <DependentUpon>LogControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogControl5.resx">
+      <DependentUpon>LogControl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFiTHD.resx">
+      <DependentUpon>PFiTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart3545009_11zon_11zon %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screw %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screw1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screw %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artificial-intelligence %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PF &amp; iTHD test icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\閃電.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\螺絲釘.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\晶片.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\螺絲釘1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電箱.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\晶片1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電箱1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\資料庫.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\資料庫1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\單機.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\智慧網格.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\風扇.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電池充電.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\正負.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\檔案系統.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\監控.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PF &amp; iTHD test icon1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
